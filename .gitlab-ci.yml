@@ -3,3 +3,11 @@ build website:
     script:
         - yarn install
         - yarn build
+
+test website:
+   script:
+       - test -f build/index.html
+
+unit test: 
+    script:
+        - yarn test
