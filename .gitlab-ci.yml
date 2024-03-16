@@ -1,25 +1,26 @@
 stages:
   - build
-  - build test
-  - unit test
+  - test
 
 build website:
     image: node:20-alpine
     stage: build
-    artifacts:
-      paths:
-        - build
     script:
         - yarn install
         - yarn build
-
-build test:
-   stage: build test
+    artifacts:
+      paths:
+        - build
+        
+test website:
+   image: apline
+   stage: test
    script:
        - test -f build/index.html
 
-unit test: 
+unit tests: 
     image: node:20-alpine
-    stage: unit test
+    stage: test
     script:
+        - yarn install
         - yarn test
