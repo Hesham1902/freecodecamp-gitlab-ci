@@ -1,5 +1,5 @@
 build website:
-    image: alpine
+    image: node:20
     script:
         - npm run install
         - npm build
