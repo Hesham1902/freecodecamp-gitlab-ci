@@ -1,5 +1,5 @@
 build website:
     image: node:20-alpine
     script:
-        - npm install
-        - npm run build
+        - yarn install
+        - yarn build
