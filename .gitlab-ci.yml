@@ -19,6 +19,7 @@ build test:
        - test -f build/index.html
 
 unit test: 
+    image: node:20-alpine
     stage: unit test
     script:
         - yarn test
