@@ -6,6 +6,9 @@ stages:
 build website:
     image: node:20-alpine
     stage: build
+    artifacts:
+      paths:
+        - build
     script:
         - yarn install
         - yarn build
