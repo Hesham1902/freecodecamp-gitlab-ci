@@ -11,6 +11,14 @@ build website:
     artifacts:
       paths:
         - build
+
+
+linter:
+    image: node:20-alpine
+    stage: .pre
+    script:
+        - yarn install
+        - yarn lint
         
 test website:
    image: alpine
@@ -20,7 +28,7 @@ test website:
 
 unit tests: 
     image: node:20-alpine
-    stage: test
+    stage: .pre
     script:
         - yarn install
         - yarn test
