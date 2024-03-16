@@ -1,5 +1,5 @@
 build website:
     image: node:20
     script:
-        - npm run install
-        - npm build
+        - npm install
+        - npm run build
