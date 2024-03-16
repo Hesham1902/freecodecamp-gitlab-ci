@@ -1,13 +1,21 @@
+stages:
+  - build
+  - build test
+  - unit test
+
 build website:
     image: node:20-alpine
+    stage: build
     script:
         - yarn install
         - yarn build
 
-test website:
+build test:
+   stage: build test
    script:
        - test -f build/index.html
 
 unit test: 
+    stage: unit test
     script:
         - yarn test
