@@ -13,7 +13,7 @@ build website:
         - build
         
 test website:
-   image: apline
+   image: alpine
    stage: test
    script:
        - test -f build/index.html
